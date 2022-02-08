@@ -1,6 +1,3 @@
-import re
-
-
 class Rational:
     def GCD(a, b):
         while a!=0 and b!=0:
@@ -29,11 +26,11 @@ class Rational:
     def __iter__(self):
         return iter((self.num, self.den))
     def __add__(self, other):
-        return Rational(f"{self.num*other.den+other.num*self.den}/{self.den*self.den}")
+        return Rational(f"{self.num*other.den+other.num*self.den}/{self.den*other.den}")
     def __sub__(self, other):
-        return Rational(f"{self.num*other.den-other.num*self.den}/{self.den*self.den}")
+        return Rational(f"{self.num*other.den-other.num*self.den}/{self.den*other.den}")
     def __mul__(self, other):
-        return Rational(f"{self.num*other.num}/{self.den*self.den}")
+        return Rational(f"{self.num*other.num}/{self.den*other.den}")
     def __floordiv__(self, other):
         return Rational(f"{self.num*other.den}/{self.den*self.num}")
     def __lt__(self, other):

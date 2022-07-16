@@ -1,1 +1,1 @@
-Also a rational class
+Just a rational class
